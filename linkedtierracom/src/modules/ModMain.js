@@ -9,7 +9,7 @@ import { Switch, Route, Redirect } from 'react-router-dom';
 import FuncInfo from './ModInfo';
 import { SYSTEMSARRAY } from '../shared/systemsarray';
 import { COMMENTS } from '../shared/comments';
-import { PARTNERS } from '../shared/partners';
+import { COUNTRIESARRAY } from '../shared/countriesarray';
 //import { PROMOTIONS } from '../shared/promotions';
 
 class CompMain extends Component {
@@ -18,8 +18,8 @@ class CompMain extends Component {
         this.state = {
             systems: SYSTEMSARRAY,
             comments: COMMENTS,
-            partners: PARTNERS
-           // promotions: PROMOTIONS
+            countries: COUNTRIESARRAY
+  
         };
     }
 
@@ -37,7 +37,7 @@ class CompMain extends Component {
                 <FuncHome
                 system={this.state.systems.filter(system => system.featured)[0]}
                 //promotion={this.state.promotions.filter(promotion => promotion.featured)[0]}
-                partner={this.state.partners.filter(partner => partner.featured)[0]}
+                passcountry={this.state.countries.filter(icountry => icountry.featured)[0]}
             />
 
             );
@@ -60,7 +60,7 @@ class CompMain extends Component {
                     <Route exact path='/systems' render={() => <FuncSystems systems={this.state.systems} />} />
                     <Route path='/consulting/:campsiteId' component={CampsiteWithId} />
                     <Route exact path='/exportation' component={CompExportation} />
-                    <Route exact path='/aboutus' render={() => <FuncAbout partners={this.state.partners} />} />
+                    <Route exact path='/aboutus' render={() => <FuncAbout passcountry={this.state.countries} />} />
                     <Redirect to='/home' />
                 </Switch>
                 <FuncFooter />

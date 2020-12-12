@@ -5,11 +5,11 @@ import { Link } from 'react-router-dom';
 
 function FuncAbout(props) {
 
-    const partners = props.partners.map(partner => {
+    const arrcountries = props.passcountry.map(icountry => {
         return (          
           //  <h5>{partner.name}</h5>
-          <Media tag="li" key={partner.id}>
-            <RenderPartner partner={partner}/>
+          <Media tag="li" key={icountry.id}>
+            <RenderPartner pass2country={icountry}/>
           </Media>
         );
     });
@@ -68,7 +68,7 @@ function FuncAbout(props) {
                 </div>
                 <div className="col mt-4">
                     <Media list>
-                        {partners}
+                        {arrcountries}
                     </Media>
                 </div>
             </div>
@@ -78,17 +78,17 @@ function FuncAbout(props) {
 
 
 
-function RenderPartner({partner}) {
-    if ({partner}){
+function RenderPartner({pass2country}) {
+    if ({pass2country}){
         return (
             <React.Fragment>
-                <Media object src={partner.image} alt={partner.name} width="150"/>
+                <Media object src={pass2country.image} alt={pass2country.name} width="150"/>
                 <Media body className="col-5 mb-5">
                     <Media heading>
-                        {partner.name}
+                        {pass2country.name}
 
                     </Media>
-                    {partner.description}
+                    {pass2country.description}
 
                 </Media>
             </React.Fragment>

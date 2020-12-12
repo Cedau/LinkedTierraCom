@@ -2,162 +2,39 @@ export const COMMENTS =
 [
     {
         id: 0,
-        campsiteId: 0,
-        rating: 5, 
-        text: "What a magnificent view!",
-        author: "Tinus Lorvaldes",
-        date: "2018-10-25T16:30Z"
+        text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum!",
+        company: "A&M Mattress Co",
+        author: "Person 1",
+        date: "2020-11-25T16:32Z"
+
     },
     {
-        id: 1,
-        campsiteId: 0,
-        rating: 4, 
-        text: "The campground was beautiful, but the bugs could bite sometimes.",
-        author: "Brennen Ech",
-        date: "2017-06-17T03:33Z"
+        id: 1, 
+        text: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit au.",
+        company: "Mia Bella NBSS",
+        author: "Person 2",
+        date: "2018-06-14T03:36Z"
     },
     {
         id: 2,
-        campsiteId: 0,
-        rating: 5, 
-        text: "I caught a world-record-breaking trout here on my last visit.",
-        author: "McKenzie Sebastian",
-        date: "2019-02-18T18:12Z"
+        text: "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat..",
+        company: "Outshine Miami",
+        author: "Person 3",
+        date: "2020-02-18T18:12Z"
     },
     {
         id: 3,
-        campsiteId: 0,
-        rating: 5, 
-        text: "A wonderful place to reconnect with nature.",
-        author: "Jordan Runn",
-        date: "2019-08-04T20:11Z"
+        text: " qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?.",
+        company: "MonologueBank",
+        author: "Person 4",
+        date: "2020-08-04T20:11Z"
     },
     {
         id: 4,
-        campsiteId: 0,
-        rating: 4, 
-        text: "The stars at night were a revelation!",
-        author: "Ann Dabramov",
-        date: "2018-07-23T19:44Z"
-    },
-    {
-        id: 5,
-        campsiteId: 1,
-        rating: 4, 
-        text: "The campground was beautiful, but the bugs could bite sometimes.",
-        author: "Brennen Ech",
-        date: "2017-06-17T03:33Z"
-    },
-    {
-        id: 6,
-        campsiteId: 1,
-        rating: 5, 
-        text: "I caught a world-record-breaking trout here on my last visit.",
-        author: "McKenzie Sebastian",
-        date: "2019-02-18T18:12Z"
-    },
-    {
-        id: 7,
-        campsiteId: 1,
-        rating: 5, 
-        text: "A wonderful place to reconnect with nature.",
-        author: "Jordan Runn",
-        date: "2019-08-04T20:11Z"
-    },
-    {
-        id: 8,
-        campsiteId: 1,
-        rating: 4, 
-        text: "The stars at night were a revelation!",
-        author: "Ann Dabramov",
-        date: "2018-07-23T19:44Z"
-    },
-    {
-        id: 9,
-        campsiteId: 1,
-        rating: 5, 
-        text: "What a magnificent view!",
-        author: "Tinus Lorvaldes",
-        date: "2018-10-25T16:30Z"
-    },
-    {
-        id: 10,
-        campsiteId: 2,
-        rating: 5, 
-        text: "I caught a world-record-breaking trout here on my last visit.",
-        author: "McKenzie Sebastian",
-        date: "2019-02-18T18:12Z"
-    },
-    {
-        id: 11,
-        campsiteId: 2,
-        rating: 5, 
-        text: "A wonderful place to reconnect with nature.",
-        author: "Jordan Runn",
-        date: "2019-08-04T20:11Z"
-    },
-    {
-        id: 12,
-        campsiteId: 2,
-        rating: 4, 
-        text: "The stars at night were a revelation!",
-        author: "Ann Dabramov",
-        date: "2018-07-23T19:44Z"
-    },
-    {
-        id: 13,
-        campsiteId: 2,
-        rating: 5, 
-        text: "What a magnificent view!",
-        author: "Tinus Lorvaldes",
-        date: "2018-10-25T16:30Z"
-    },
-    {
-        id: 14,
-        campsiteId: 2,
-        rating: 4, 
-        text: "The campground was beautiful, but the bugs could bite sometimes.",
-        author: "Brennen Ech",
-        date: "2017-06-17T03:33Z"
-    },
-    {
-        id: 15,
-        campsiteId: 3,
-        rating: 5, 
-        text: "A wonderful place to reconnect with nature.",
-        author: "Jordan Runn",
-        date: "2019-08-04T20:11Z"
-    },
-    {
-        id: 16,
-        campsiteId: 3,
-        rating: 4, 
-        text: "The stars at night were a revelation!",
-        author: "Ann Dabramov",
-        date: "2018-07-23T19:44Z"
-    },
-    {
-        id: 17,
-        campsiteId: 3,
-        rating: 5, 
-        text: "What a magnificent view!",
-        author: "Tinus Lorvaldes",
-        date: "2018-10-25T16:30Z"
-    },
-    {
-        id: 18,
-        campsiteId: 3,
-        rating: 4, 
-        text: "The campground was beautiful, but the bugs could bite sometimes.",
-        author: "Brennen Ech",
-        date: "2017-06-17T03:33Z"
-    },
-    {
-        id: 19,
-        campsiteId: 3,
-        rating: 5, 
-        text: "I caught a world-record-breaking trout here on my last visit.",
-        author: "McKenzie Sebastian",
-        date: "2019-02-18T18:12Z"
+        text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum!",
+        company: "Connect Community",
+        author: "Person 5",
+        date: "2020-07-23T19:44Z"
+    
     }
 ]

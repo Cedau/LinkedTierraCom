@@ -67,14 +67,14 @@ function RenderComments({comments}){
                     <div className="col">
                         <Breadcrumb>
                             <BreadcrumbItem><Link to="/directory">Directory</Link></BreadcrumbItem>
-                            <BreadcrumbItem active>{props.campsite.name}</BreadcrumbItem>
+                            <BreadcrumbItem active>{props.system.name}</BreadcrumbItem>
                         </Breadcrumb>
-                        <h2>{props.campsite.name}</h2>
+                        <h2>{props.system.name}</h2>
                         <hr />
                     </div>
                 </div>
                 <div className="row">
-                    <RenderCampsite campsite={props.campsite} />
+                    <RenderCampsite system={props.system} />
                     <RenderComments comments={props.comments} />
                 </div>
             </div>
