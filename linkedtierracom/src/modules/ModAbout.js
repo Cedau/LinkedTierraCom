@@ -9,7 +9,7 @@ function FuncAbout(props) {
         return (          
           //  <h5>{partner.name}</h5>
           <Media tag="li" key={icountry.id}>
-            <RenderPartner pass2country={icountry}/>
+            <Rendercountry pass2country={icountry}/>
           </Media>
         );
     });
@@ -26,45 +26,37 @@ function FuncAbout(props) {
                     <hr />
                 </div>
             </div>
-            <div className="row row-content">
-                <div className="col-sm-6">
-                    <h3>Our Mission</h3>
-                    <p>We present a curated database of the best campsites in the vast woods and backcountry of the World Wide Web Wilderness. We increase access to adventure for the public while promoting safe and respectful use of resources. The expert wilderness trekkers on our staff personally verify each campsite to make sure that they are up to our standards. We also present a platform for campers to share reviews on campsites they have visited with each other.</p>
+
+
+            <div className="row row3 mt-4">   
+                <div className="col-6"> 
+                    <h2>Who are we</h2>
+                    <p>unt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
                 </div>
-                <div className="col-sm-6">
-                    <Card>
-                        <CardHeader className="bg-primary text-white"><h3>Facts At a Glance</h3></CardHeader>
-                        <CardBody>
-                            <dl className="row">
-                                <dt className="col-6">Founded</dt>
-                                <dd className="col-6">February 3, 2016</dd>
-                                <dt className="col-6">No. of Campsites in 2019</dt>
-                                <dd className="col-6">563</dd>
-                                <dt className="col-6">No. of Reviews in 2019</dt>
-                                <dd className="col-6">4388</dd>
-                                <dt className="col-6">Employees</dt>
-                                <dd className="col-6">42</dd>
-                            </dl>
-                        </CardBody>
-                    </Card>
+                <div className="col-6"> 
+                    <img src="/assets/images/knowledgebank.jpg" width="300"></img>
                 </div>
-                <div className="col">
-                    <Card className="bg-light mt-3">
-                        <CardBody>
-                            <blockquote className="blockquote">
-                                <p className="mb-0">I will not follow where the path may lead, but I will go where there is no path, and I will leave a trail.</p>
-                                <footer className="blockquote-footer">Muriel Strode,{' '}
-                                    <cite title="Source Title">"Wind-Wafted Wild Flowers" -
-                                    The Open Court, 1903</cite>
-                                </footer>
-                            </blockquote>
-                        </CardBody>
-                    </Card>
-                </div>
+
             </div>
-            <div className="row row-content">
+
+            <div className="row row3 mt-4">   
+                <div className="col-12"> 
+                    <h2>Strategic Planning</h2>
+                </div>
+                <div className="col-6">
+                    <h2>Mission</h2> 
+                    <p>on ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                </div>
+                <div className="col-6">
+                    <h2>Vision</h2> 
+                    <p>iquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                </div>
+
+            </div>
+         
+            <div className="row">
                 <div className="col-12">
-                    <h3>Community Partners</h3>
+                    <h3>Countries linked:</h3>
                 </div>
                 <div className="col mt-4">
                     <Media list>
@@ -78,7 +70,7 @@ function FuncAbout(props) {
 
 
 
-function RenderPartner({pass2country}) {
+function Rendercountry({pass2country}) {
     if ({pass2country}){
         return (
             <React.Fragment>
@@ -88,7 +80,7 @@ function RenderPartner({pass2country}) {
                         {pass2country.name}
 
                     </Media>
-                    {pass2country.description}
+                  
 
                 </Media>
             </React.Fragment>

@@ -52,8 +52,8 @@ class CompHeader extends Component {
                                 </NavItem>
                                 <NavItem>
 
-                                <NavLink className="nav-link" to="/systems">
-                                        <i className="fa fa-address-card fa-lg" /> Systems
+                                <NavLink className="nav-link" to="/contact">
+                                        <i className="fa fa-address-card fa-lg" /> Contact
                                     </NavLink>
 
                                  </NavItem>
@@ -62,6 +62,7 @@ class CompHeader extends Component {
                         </Collapse>
                     </div>
                 </Navbar>
+        
             </React.Fragment>
         );
     }

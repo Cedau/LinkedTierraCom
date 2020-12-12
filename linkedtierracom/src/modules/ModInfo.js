@@ -7,15 +7,15 @@ import { Link } from 'react-router-dom';
 
 
 
-function RenderCampsite({system}){
+function RenderSystem({pass6system}){
         return(
           
                     <div className="col-md-5 m-1">
                         <Card>
-                            <CardImg top src={system.image} alt={system.name} />
+                            <CardImg top src={pass6system.image} alt={pass6system.name} />
                             <CardBody>
-                                <CardTitle>{system.name}</CardTitle>
-                                <CardText>{system.description}</CardText>
+                                <CardTitle>{pass6system.name}</CardTitle>
+                                <CardText>{pass6system.description}</CardText>
                             </CardBody>
                         </Card>
                     </div>
@@ -60,21 +60,21 @@ function RenderComments({comments}){
     
     function FuncInfo(props) {
         
-     if (props.campsite) {
+     if (props.pass5system) {
         return (
             <div className="container">
                 <div className="row">
                     <div className="col">
                         <Breadcrumb>
-                            <BreadcrumbItem><Link to="/directory">Directory</Link></BreadcrumbItem>
-                            <BreadcrumbItem active>{props.system.name}</BreadcrumbItem>
+                            <BreadcrumbItem><Link to="/systems">Systems</Link></BreadcrumbItem>
+                            <BreadcrumbItem active>{props.pass5system.name}</BreadcrumbItem>
                         </Breadcrumb>
-                        <h2>{props.system.name}</h2>
+                        <h2>{props.pass5system.name}</h2>
                         <hr />
                     </div>
                 </div>
                 <div className="row">
-                    <RenderCampsite system={props.system} />
+                    <RenderSystem pass6system={props.pass5system} />
                     <RenderComments comments={props.comments} />
                 </div>
             </div>

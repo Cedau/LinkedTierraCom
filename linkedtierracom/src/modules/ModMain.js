@@ -3,8 +3,9 @@ import FuncSystems from './ModSystems';
 import CompHeader from './ModHeader';
 import FuncFooter from './ModFooter';
 import FuncHome from './ModHome';
-import CompExportation from './ModExportation';
+import CompContact from './ModContact';
 import FuncAbout from './ModAbout';
+import FuncExportation from './ModExportation';
 import { Switch, Route, Redirect } from 'react-router-dom';
 import FuncInfo from './ModInfo';
 import { SYSTEMSARRAY } from '../shared/systemsarray';
@@ -35,19 +36,18 @@ class CompMain extends Component {
         const HomePage = () => {
             return (
                 <FuncHome
-                system={this.state.systems.filter(system => system.featured)[0]}
-                //promotion={this.state.promotions.filter(promotion => promotion.featured)[0]}
-                passcountry={this.state.countries.filter(icountry => icountry.featured)[0]}
+                pass4system={this.state.systems.filter(system => system.featured)[0]}
+                
             />
 
             );
         }
 
-        const CampsiteWithId = ({match}) => {
+        const SystemWithId = ({match}) => {
             return (
                 <FuncInfo 
-                    system={this.state.systems.filter(system => system.id === +match.params.systemId)[0]}
-                    comments={this.state.comments.filter(comment => comment.campsiteId === +match.params.campsiteId)}
+                    pass5system={this.state.systems.filter(system => system.id === +match.params.system.Id)[0]}
+                    comments={this.state.comments.filter(comment => comment.systemId === +match.params.systemId)}
                 />
             );
         }  
@@ -58,9 +58,11 @@ class CompMain extends Component {
                 <Switch>
                     <Route path='/home' component={HomePage} />
                     <Route exact path='/systems' render={() => <FuncSystems systems={this.state.systems} />} />
-                    <Route path='/consulting/:campsiteId' component={CampsiteWithId} />
-                    <Route exact path='/exportation' component={CompExportation} />
+                    <Route path='/consulting/:systemId' component={SystemWithId} />
+                    <Route exact path='/contact' component={CompContact} />
                     <Route exact path='/aboutus' render={() => <FuncAbout passcountry={this.state.countries} />} />
+                    <Route exact path='/exportation' render={() => <FuncExportation passcountry={this.state.countries} />} />
+            
                     <Redirect to='/home' />
                 </Switch>
                 <FuncFooter />

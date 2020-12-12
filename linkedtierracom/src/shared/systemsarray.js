@@ -10,14 +10,14 @@ export const SYSTEMSARRAY = [
         id: 1,
         name:"Art System",
         image: "/assets/images/artsystem.jpg",
-        featured: false,
+        featured: true,
         description: "."
     },
     {
         id: 2,
         name:"Discovery System",
         image: "/assets/images/discoverysystem.jpg",
-        featured: false,
+        featured: true,
         description: "A system for transportation as well as for information about vacation."
     },
     {
