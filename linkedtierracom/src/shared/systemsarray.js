@@ -22,7 +22,7 @@ export const SYSTEMSARRAY = [
     },
     {
         id: 3,
-        name:"System Consulting",
+        name:"System's Consulting",
         image: "/assets/images/knowledgebank.jpg",
         featured: true,
         description: "a bank for information on how to think of systems engineering and architecture."

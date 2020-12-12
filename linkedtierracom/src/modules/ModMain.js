@@ -46,7 +46,7 @@ class CompMain extends Component {
         const SystemWithId = ({match}) => {
             return (
                 <FuncInfo 
-                    pass5system={this.state.systems.filter(system => system.id === +match.params.system.Id)[0]}
+                    pass5system={this.state.systems.filter(system => system.id === +match.params.systemId)[0]}
                     comments={this.state.comments.filter(comment => comment.systemId === +match.params.systemId)}
                 />
             );
@@ -58,7 +58,7 @@ class CompMain extends Component {
                 <Switch>
                     <Route path='/home' component={HomePage} />
                     <Route exact path='/systems' render={() => <FuncSystems systems={this.state.systems} />} />
-                    <Route path='/consulting/:systemId' component={SystemWithId} />
+                    <Route path='/systems/:systemId' component={SystemWithId} />
                     <Route exact path='/contact' component={CompContact} />
                     <Route exact path='/aboutus' render={() => <FuncAbout passcountry={this.state.countries} />} />
                     <Route exact path='/exportation' render={() => <FuncExportation passcountry={this.state.countries} />} />
