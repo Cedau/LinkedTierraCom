@@ -7,15 +7,15 @@ import { Link } from 'react-router-dom';
 
 
 
-function RenderCampsite({campsite}){
+function RenderCampsite({system}){
         return(
           
                     <div className="col-md-5 m-1">
                         <Card>
-                            <CardImg top src={campsite.image} alt={campsite.name} />
+                            <CardImg top src={system.image} alt={system.name} />
                             <CardBody>
-                                <CardTitle>{campsite.name}</CardTitle>
-                                <CardText>{campsite.description}</CardText>
+                                <CardTitle>{system.name}</CardTitle>
+                                <CardText>{system.description}</CardText>
                             </CardBody>
                         </Card>
                     </div>

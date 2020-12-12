@@ -38,8 +38,8 @@ class CompHeader extends Component {
                                 </NavItem>
                                 <NavItem>
 
-                                    <NavLink className="nav-link" to="/consulting">
-                                        <i className="fa fa-list fa-lg" /> Consulting
+                                    <NavLink className="nav-link" to="/systems">
+                                        <i className="fa fa-list fa-lg" /> Systems
                                     </NavLink>
                                 </NavItem>
                                 <NavItem>
@@ -52,7 +52,7 @@ class CompHeader extends Component {
                                 </NavItem>
                                 <NavItem>
 
-                                <NavLink className="nav-link" to="/contactus">
+                                <NavLink className="nav-link" to="/systems">
                                         <i className="fa fa-address-card fa-lg" /> Systems
                                     </NavLink>
 

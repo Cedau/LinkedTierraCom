@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import FuncConsulting from './ModConsulting';
+import FuncSystems from './ModSystems';
 import CompHeader from './ModHeader';
 import FuncFooter from './ModFooter';
 import FuncHome from './ModHome';
@@ -7,29 +7,36 @@ import CompExportation from './ModExportation';
 import FuncAbout from './ModAbout';
 import { Switch, Route, Redirect } from 'react-router-dom';
 import FuncInfo from './ModInfo';
-import { CAMPSITES } from '../shared/campsites';
+import { SYSTEMSARRAY } from '../shared/systemsarray';
 import { COMMENTS } from '../shared/comments';
 import { PARTNERS } from '../shared/partners';
-import { PROMOTIONS } from '../shared/promotions';
+//import { PROMOTIONS } from '../shared/promotions';
 
 class CompMain extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            campsites: CAMPSITES,
+            systems: SYSTEMSARRAY,
             comments: COMMENTS,
-            partners: PARTNERS,
-            promotions: PROMOTIONS
+            partners: PARTNERS
+           // promotions: PROMOTIONS
         };
     }
+
+
+/* SYSTEMSARRAY is the actual array where all info is stored
+   arrsystem is the variable being crated ro show
+   systems is the total variable being taggled (passed) around
+   system are variables created within small fiunctins to act as place holder of information
+*/
 
     render() {
 
         const HomePage = () => {
             return (
                 <FuncHome
-                campsite={this.state.campsites.filter(campsite => campsite.featured)[0]}
-                promotion={this.state.promotions.filter(promotion => promotion.featured)[0]}
+                system={this.state.systems.filter(system => system.featured)[0]}
+                //promotion={this.state.promotions.filter(promotion => promotion.featured)[0]}
                 partner={this.state.partners.filter(partner => partner.featured)[0]}
             />
 
@@ -39,7 +46,7 @@ class CompMain extends Component {
         const CampsiteWithId = ({match}) => {
             return (
                 <FuncInfo 
-                    campsite={this.state.campsites.filter(campsite => campsite.id === +match.params.campsiteId)[0]}
+                    system={this.state.systems.filter(system => system.id === +match.params.systemId)[0]}
                     comments={this.state.comments.filter(comment => comment.campsiteId === +match.params.campsiteId)}
                 />
             );
@@ -50,7 +57,7 @@ class CompMain extends Component {
                 <CompHeader />
                 <Switch>
                     <Route path='/home' component={HomePage} />
-                    <Route exact path='/consulting' render={() => <FuncConsulting campsites={this.state.campsites} />} />
+                    <Route exact path='/systems' render={() => <FuncSystems systems={this.state.systems} />} />
                     <Route path='/consulting/:campsiteId' component={CampsiteWithId} />
                     <Route exact path='/exportation' component={CompExportation} />
                     <Route exact path='/aboutus' render={() => <FuncAbout partners={this.state.partners} />} />

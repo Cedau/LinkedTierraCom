@@ -2,28 +2,30 @@ import React from 'react';
 import { Card, CardImg, CardImgOverlay, CardTitle, Breadcrumb, BreadcrumbItem } from 'reactstrap';
 import { Link } from 'react-router-dom';
 
-function RenderDirectoryItem({campsite}) {
+function RenderSystemItem({system}) {
     return (
         <Card>
-            <Link to={`/directory/${campsite.id}`}>
-                <CardImg width="100%" src={campsite.image} alt={campsite.name} />
+            <Link to={`/systems/${system.id}`}>
+                <CardImg width="100%" src={system.image} alt={system.name} />
                 <CardImgOverlay>
-                    <CardTitle>{campsite.name}</CardTitle>
+                    <CardTitle>{system.name}</CardTitle>
                 </CardImgOverlay>
             </Link> 
         </Card>
     );
 }
 
+
+
 // <link> creates the link and gives it the id so it can add  the #3 in the browser  
-//class Directory extends Component  changed from
-function FuncConsulting (props){
+
+function FuncSystems (props){
    
     //const directory = this.props.campsites.map(campsite => {     Before    this is not use
-    const directory = props.campsites.map(campsite => {
+    const arrsystem = props.systems.map(system => {
         return (
-            <div key={campsite.id} className="col-md-5 m-1">
-                <RenderDirectoryItem campsite={campsite} />
+            <div key={system.id} className="col-md-5 m-1">
+                <RenderSystemItem system={system} />
             </div>
         );
     });
@@ -34,20 +36,20 @@ function FuncConsulting (props){
                 <div className="col">
                     <Breadcrumb>
                         <BreadcrumbItem><Link to="/home">Home</Link></BreadcrumbItem>
-                        <BreadcrumbItem active>Directory</BreadcrumbItem>
+                        <BreadcrumbItem active>Systems</BreadcrumbItem>
                     </Breadcrumb>
-                    <h2>Directory</h2>
+                    <h2>Systems</h2>
                     <hr />
                 </div>
             </div>
             <div className="row">
-                {directory}
+                {arrsystem}
             </div>
         </div>
     );
 }
 
-export default FuncConsulting;
+export default FuncSystems;
 /*
 Replace it all with the CampsiteInfo component.
 Pass the this.state.selectedCampsite object as props to this Campsite component, using the attribute name of "campsite". 

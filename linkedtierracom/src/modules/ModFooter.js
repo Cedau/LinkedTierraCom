@@ -10,7 +10,7 @@ function FuncFooter(props) {
                         <h5>Links</h5>
                         <ul className="list-unstyled">
                         <li><Link to='/home'>Home</Link></li>
-                            <li><Link to='/directory'>Directory</Link></li>
+                            <li><Link to='/systems'>Directory</Link></li>
                             <li><Link to='/aboutus'>About</Link></li>
                             <li><Link to='/contactus'>Contact</Link></li>
                         </ul>
