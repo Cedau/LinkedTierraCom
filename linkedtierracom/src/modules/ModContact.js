@@ -98,7 +98,7 @@ class CompContact extends Component {
                     <h5><b>United States of America</b></h5>
                     <address>
                         7402 pine green ln<br />
-                        Humle, TX 77346<br />
+                        Humble, TX 77346<br />
                         U.S.A.
                     </address>
                 </div>
